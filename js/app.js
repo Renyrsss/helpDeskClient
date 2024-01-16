@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 massage +=  `<b>Телеофн : ${inputs[0].value}</b>\n`
                 massage += `<b>Комментарий : ${textArea.value}</b>\n`;
                 massage += `<b>Запрос : ${query}</b>\n`;
-                axios.post(`192.168.101.25:1337${admin}`,{
+                axios.post(`http://192.168.101.25:1337${admin}`,{
                     data:{
                         userName : inputs[1].value,
                         userPhone : inputs[0].value,
