@@ -72,6 +72,21 @@ document.addEventListener("DOMContentLoaded", function () {
                     textArea.value = '';
                     success.style.display = 'block';
                     successImg.classList.add('successLoadingActive');
+
+
+                    axios.post(URI_API,{
+                            chat_id:CHAT_ID,
+                            parse_mode: 'html',
+                            text:massage
+                        })
+                        .then((res) => {
+                            
+                        })
+                        .catch((err) =>{
+                            console.log(err);
+                        })
+
+
                     setTimeout(() => {
                         success.style.display = 'none'
                         successImg.classList.remove('successLoadingActive');
